@@ -19,6 +19,5 @@ Puis ajouter les dans votre fit en temps que param callbacks et vous verrez des 
 histo = self.model.fit(trainData, TestData, verbose=1, epochs=int(epochs), callbacks=callbackList)
 
 Combine ces callback avec celui de keras ModelCheckpoint afin de pouvoir kill votre training a tout moment
-from keras.callbacks import ModelCheckpoint
 plus dinfo ici -> https://keras.io/api/callbacks/model_checkpoint/
             
