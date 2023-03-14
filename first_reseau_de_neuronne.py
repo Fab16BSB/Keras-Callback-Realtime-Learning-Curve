@@ -112,7 +112,7 @@ from keras.callbacks import CSVLogger
 from callback import LearningCurves
 
 #csv_logger = CSVLogger("perf.csv", append=True)
-learning_curves = LearningCurves("", lastEpoch=0, show_graph = False)
+learning_curves = LearningCurves()
 callbackList = []
 #callbackList.append(csv_logger)
 callbackList.append(learning_curves)
@@ -145,7 +145,7 @@ model.summary()
 # Fit the model with the train features and train labels
 # batch_size represente the number of sample it will see at the same time
 # epochs represente the number of time he will see all data
-history = model.fit(features_train, labels_train, batch_size=1, epochs=100, validation_data=(features_val, labels_val), callbacks=callbackList)
+history = model.fit(features_train, labels_train, batch_size=1, initial_epoch=0, epochs=10, validation_data=(features_val, labels_val), callbacks=callbackList)
 
 # summarize history for loss
 plt.plot(history.history['loss'])
