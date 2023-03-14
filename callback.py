@@ -7,7 +7,7 @@ from keras.callbacks import Callback
 
 class LearningCurves(Callback):
 
-    def __init__(self, savePath, fileName="LearningCurve.png", lastEpoch=0, save_graph=True, show_graph=True, blackBackground=False):
+    def __init__(self, savePath="", fileName="LearningCurve.png", lastEpoch=0, save_graph=True, show_graph=True, blackBackground=False):
         self.savePath = savePath
         self.fileName = fileName
         self.save_graph = save_graph
@@ -39,16 +39,22 @@ class LearningCurves(Callback):
             'accuracy': {'train': [], 'val': []}
         }
 
-    # Un tour complet (train + test)
+    # À chaque tour du training (train + validation)
     def on_epoch_end(self, epoch, logs={}):
+        
+        # On change le numéro d'epoch si lastEpoch défini
         epoch = epoch + self.lastEpoch
+        
+        # Stockage des performance de l'epoch actuel
         self.data['epoch'].append(epoch)
         self.data['loss']['train'].append(logs.get('loss'))
         self.data['accuracy']['train'].append(logs.get('accuracy'))
 
+        # Plot Accuracy / Loss performance
         self.axs[0].plot(self.data['epoch'], self.data['loss']['train'], color='r')
         self.axs[1].plot(self.data['epoch'], self.data['accuracy']['train'], color='r')
 
+        # Si validation dispo plot validation accuracy / loss performance
         if 'val_loss' in logs:
             self.data['loss']['val'].append(logs.get('val_loss'))
             self.data['accuracy']['val'].append(logs.get('val_accuracy'))
@@ -62,11 +68,10 @@ class LearningCurves(Callback):
         self.axs[0].legend(handles=[red_patch, blue_patch], loc=1)
         self.axs[1].legend(handles=[red_patch, blue_patch], loc=4)
 
-
         # Affichage du graphe
         if self.show_graph == True:
             plt.show()
 
         # Sauvegarde du graphe
         if self.save_graph == True:
-            self.figure.savefig(os.path.join(self.savePath, "LearningCurve.png"))
+            self.figure.savefig(os.path.join(self.savePath,  self.fileName))
