@@ -3,7 +3,8 @@
 Concevoir un callback keras créant une learning curve en temps réel. <br>
 Bien commenté le code <br>
 Rendre le projet publique <br>
-Documenté le repo en francais, espagnol et anglais.
+Documenté le repo en francais, espagnol et anglais <br>
+Fourni les installation necessaire <br>
 
 <h2> Cas possible </h2>
 On créer une courbe en live en utilisant uniquement un jeu de train <br>
