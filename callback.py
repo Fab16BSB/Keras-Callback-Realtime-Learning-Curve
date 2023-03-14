@@ -3,23 +3,41 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from keras.callbacks import Callback
 
+
+# TODO remove duplicate epoch entry ?
+# TODO accuracy first graphe ?
+
 class LearningCurves(Callback):
 
-    def __init__(self, savePath="", fileName="LearningCurve.png", lastEpoch=0, save_graph=True, show_graph=True, blackBackground=False):
-        self.savePath = savePath
-        self.fileName = fileName
+    def __init__(self, save_path="", graph_name="LearningCurve.png", save_graph=True, show_graph=True, black_background=False, csv_to_load=""):
+        self.save_path = save_path
+        self.graphe_name = graph_name
         self.save_graph = save_graph
         self.show_graph = show_graph
-        self.lastEpoch = lastEpoch
 
+        # Configuration de la structure pour stockage des données
+        self.data = {
+            'epoch': [],
+            'accuracy': [],
+            'loss': [],
+            'val_accuracy': [],
+            'val_loss': []
+        }
+        
+        # Charger les données d'un fichier CSV existant
+        if csv_to_load != "" and os.path.exists(csv_to_load):
+            self.__read_csv(csv_to_load)
+            
+        '''
         # Override graphe si nécessaire
         if self.lastEpoch == 0 and os.path.exists(os.path.join(savePath, fileName)):
             os.remove(os.path.join(savePath, fileName))
-
+        '''
+        
         # Configuration du graphe
 
         # Set background
-        if blackBackground == True :
+        if black_background == True :
             plt.style.use('dark_background')
         else :
             plt.style.use('classic')
@@ -30,18 +48,10 @@ class LearningCurves(Callback):
         self.axs[0].set_ylabel("Loss")
         self.axs[1].set_ylabel("Accuracy")
 
-        # Configuration de la structure pour stockage des données
-        self.data = {
-            'epoch': [],
-            'loss': {'train': [], 'val': []},
-            'accuracy': {'train': [], 'val': []}
-        }
+       
 
     # À chaque tour du training (train + validation)
     def on_epoch_end(self, epoch, logs={}):
-        
-        # On change le numéro d'epoch si lastEpoch défini
-        epoch = epoch + self.lastEpoch
         
         # Stockage des performance de l'epoch actuel
         self.data['epoch'].append(epoch)
@@ -73,3 +83,21 @@ class LearningCurves(Callback):
         # Sauvegarde du graphe
         if self.save_graph == True:
             self.figure.savefig(os.path.join(self.savePath,  self.fileName))
+            
+            
+            
+    def __read_csv(self, path_to_csv):
+        
+        with open(path_to_csv, 'r') as f:
+            reader = csv.DictReader(f)
+
+            for row in reader:
+                self.data['epoch'].append(int(row['epoch']))
+                self.data['accuracy'].append(float(row['accuracy']))
+                self.data['loss'].append(float(row['loss']))
+
+                if 'val_accuracy' in row:
+                    self.data['val_accuracy'].append(float(row['val_accuracy']))
+
+                if 'val_loss' in row:
+                    self.data['val_loss'].append(float(row['val_loss']))
