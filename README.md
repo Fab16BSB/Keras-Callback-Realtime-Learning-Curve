@@ -20,7 +20,7 @@ Le graphique est composé de 2 sous graphe : <br>
 <ol>
   <li> 
     first_reseau_de_neuronne est un code permettant de testé le callback. <br>
-    Il représente un exo de classification du probleme de xor à l'aide d'un MLP fait en keras. <br>
+    Il représente un exo de classification du probleme de xor à l'aide d'un MLP fait en keras. <br> <br>
   </li>
   <li> 
     Callback contient le code pour effectuer une real time learning curve. <br>
@@ -31,7 +31,7 @@ Le graphique est composé de 2 sous graphe : <br>
     - la derniere epoch qui permet de reprendre le dessin en cas de re-training <br>
     - save_graph <br>
     - show graph <br>
-    - blackBackgrounf : pour effectuer un graphe sous fond noir ou blanc. <br>
+    - blackBackgrounf : pour effectuer un graphe sous fond noir ou blanc. <br><br>
   </li>
   <li>
     L'ancien readme + l'ancien callback : version de test fait à la vas vite pour comprendre comment les callback keras marche.
