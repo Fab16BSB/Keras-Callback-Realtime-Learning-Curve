@@ -13,7 +13,8 @@ On reprend le graphe la ou on l'a laissé
 <h2> Descriptif du graphe </h2>
 Le graphique est composé de 2 sous graphe : <br>
 - L'un deux affiche les courbe de loss pour pouvoir les comparer <br>
-- L'autre affiche les courbe d'accuracy
+- L'autre affiche les courbe d'accuracy <br>
+Exemple dispo dans le repo : LearningCurve_exemple.png
 
 <h2> Contenu </h2>
 
