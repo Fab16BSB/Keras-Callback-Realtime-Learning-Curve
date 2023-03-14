@@ -9,7 +9,7 @@ Fournir les installation necessaire <br>
 <h2> Cas possible </h2>
 On créer une courbe en live en utilisant uniquement un jeu de train -> OK <br>
 On créer une courbe en live en utilisant uniquement un jeu de train + validation -> OK <br>
-On reprend le graphe la ou on l'a laissé -> Aucune erreur mais pas ok <br>
+On reprend le graphe la ou on l'a laissé -> Aucune erreur mais pas ok (Il semble qu'il faut un fichier CSV) <br>
 On demande de reprendre mais le graphe n'existe pas ou n'est pas trouvé => erreur de l'utilisateur mais le code marche <br>
 On demande de reprendre mais on se trompe dans le numero de la der epoch et on compte -1 => erreur de l'utilisateur le code ne plante pas mais ne semble pas marcher correctement.
 On demande de reprendre mais on se trompe dans le numero de la der epoch et on compte +1 => erreur de l'utilisateur le code ne plante pas mais ne semble pas marcher correctement.
