@@ -1,8 +1,6 @@
 import os
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
-import seaborn as sn
-import pandas as pd
 from keras.callbacks import Callback
 
 class LearningCurves(Callback):
