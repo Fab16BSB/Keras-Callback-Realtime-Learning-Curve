@@ -1,6 +1,6 @@
 
 <h1> Exemples </h1>
-Ce dossier présente divers exemples de résultat pouvant être obtenu.
+Ce dossier présente divers exemples de résultat pouvant être obtenu. <br><br>
 <ol>
   <li> LearningCurve_normal <br> courbe généré à partir du code first_reseau_de_neuronne.py pour 10 epoch </li> <br><br>
   <li> LearningCurve_black <br> exemple de courbe avec fond noir généré par le code first_reseau_de_neuronne pour 10 epoch </li> <br><br>
