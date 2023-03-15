@@ -3,7 +3,7 @@
 Ce dossier présente divers exemples de résultat pouvant être obtenu. <br><br>
 <ol>
   <li> LearningCurve_normal <br> 
-  <img src="LearningCurve_normal.png"><br>
+  <img width=50px height=50px src="LearningCurve_normal.png"><br>
   courbe généré à partir du code first_reseau_de_neuronne.py pour 10 epoch </li> <br><br>
   
   <li> LearningCurve_black <br> exemple de courbe avec fond noir généré par le code first_reseau_de_neuronne pour 10 epoch </li> <br><br>
