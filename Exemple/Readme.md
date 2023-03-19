@@ -25,4 +25,10 @@ Ce dossier présente divers exemples de résultat pouvant être obtenu. <br><br>
     courbe resultant d'une erreur lors d'un re-entrainement, l'epoch de depart lors du retrain représente une epoch de - que celle de fin <br>
     <img width=400px height=300px src="LearningCurve_retrain_epoch-1.png"><br>
     </li><br><br>
+    
+    <li> LearningCurve_no_validation <br> 
+    courbe resultant d'un entrainement sans utilisation de set de validation <br>
+    <img width=400px height=300px src="LearningCurve_no_validation.png"><br>
+    </li><br><br>
+    
 </ol>
