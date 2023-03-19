@@ -26,9 +26,8 @@ Ce dossier présente divers exemples de résultat pouvant être obtenu. <br><br>
     <img width=400px height=300px src="LearningCurve_retrain_epoch-1.png"><br>
     </li><br><br>
     
-    <li> LearningCurve_no_validation <br> 
+  <li> LearningCurve_no_validation <br> 
     courbe resultant d'un entrainement sans utilisation de set de validation <br>
     <img width=400px height=300px src="LearningCurve_no_validation.png"><br>
-    </li><br><br>
-    
+    </li>    
 </ol>
