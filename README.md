@@ -1,5 +1,9 @@
-<h1> V1.0 : </h1>
+<h1> V1.0 : </h1> 
+<P>
+<img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/p">
+<img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Fab16BSB/Keras-Callback-Realtime-Learning-Curve?color=gree">
 <h2> Objectif </h2>
+</p>
 Concevoir un callback keras créant une learning curve en temps réel. <br>
 Bien commenté le code <br>
 Rendre le projet publique <br>
