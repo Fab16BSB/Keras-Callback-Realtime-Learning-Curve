@@ -5,6 +5,7 @@
 <h2> Objectif </h2>
 </p>
 Concevoir un callback keras créant une learning curve en temps réel. <br>
+Crée un dossier demo avec le code permettant de tester le callback + faire en sorte de pouvoir choisir le cas d'usage voulu <br>
 Bien commenté le code <br>
 Rendre le projet publique <br>
 Documenté le repo en francais, espagnol et anglais <br>
