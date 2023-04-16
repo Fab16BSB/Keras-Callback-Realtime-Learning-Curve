@@ -2,6 +2,16 @@
 <P>
 <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/p">
 <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/Fab16BSB/Keras-Callback-Realtime-Learning-Curve?color=gree">
+
+<h2> TODO </h2>
+Tester la solution sur mac
+Tester sur linux
+Voir pour windows si ferme la fenetre à la fin ?
+Faire la doc en français
+Faire la doc en anglais
+Faire la doc en espagnol
+Proposé un jupyter notebook
+
 <h2> Objectif </h2>
 </p>
 Concevoir un callback keras créant une learning curve en temps réel. <br>
