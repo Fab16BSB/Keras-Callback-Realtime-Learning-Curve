@@ -70,7 +70,9 @@ class LearningCurves(Callback):
 
         # Affichage du graphe
         if self.show_graph == True:
-            plt.show()
+            #plt.show()
+            plt.draw()
+            plt.pause(0.001)
 
         # Sauvegarde du graphe
         if self.save_graph == True:
