@@ -95,7 +95,7 @@ class LearningCurves(Callback):
         plt.close()
         metrics = list(set(self.keyList) - set(self.metric))
         self.setGraphe(metrics, False)
-        self.plotGraphe(metrics)
+        self.plotGraphe(self.keyList)
         self.saveGraphe()
 
 
@@ -152,7 +152,6 @@ class LearningCurves(Callback):
         if self.save_graph == True:
 
             for indexFigure in range(0, len(self.figures)) :
-                print(indexFigure, self.keyList[indexFigure])
                 path = os.path.join(self.savePath, self.keyList[indexFigure] + self.extension)
 
                 self.figures[indexFigure].savefig(path)
